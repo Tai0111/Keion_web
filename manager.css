@@ -1,0 +1,79 @@
+@charset "UTF-8";
+/* PC用CSS*/
+
+@media print, screen and (min-width: 640px) {
+  /**************
+  form.php - css
+  **************/
+
+  body {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    font-size: 100%;
+    font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+    background: -webkit-linear-gradient(left, #BDBFBA 4%, #5A5C5B 98%), -webkit-linear-gradient(16deg, rgba(255, 255, 255, 0.5) 54%, rgba(0, 0, 0, 0.5) 100%);
+    background: linear-gradient(90deg, #BDBFBA 4%, #5A5C5B 98%), linear-gradient(74deg, rgba(255, 255, 255, 0.5) 54%, rgba(0, 0, 0, 0.5) 100%);
+    background-blend-mode: multiply;
+  }
+
+  div.top {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  form {
+    font-size: 100%;
+    text-align: center;
+  }
+
+  .download {
+    padding: 5px;
+    margin: 5px;
+  }
+
+  .back {
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+  }
+}
+
+/***************
+スマホ用CSS
+***************/
+@media screen and (max-width: 640px) {
+
+  body {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    font-size: 100%;
+    font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+    background: -webkit-linear-gradient(left, #BDBFBA 4%, #5A5C5B 98%), -webkit-linear-gradient(16deg, rgba(255, 255, 255, 0.5) 54%, rgba(0, 0, 0, 0.5) 100%);
+    background: linear-gradient(90deg, #BDBFBA 4%, #5A5C5B 98%), linear-gradient(74deg, rgba(255, 255, 255, 0.5) 54%, rgba(0, 0, 0, 0.5) 100%);
+    background-blend-mode: multiply;
+  }
+
+  div.top {
+    padding: 2%;
+    margin: 2%;
+  }
+
+  form {
+    font-size: 100%;
+    text-align: center;
+  }
+
+  .download {
+    padding: 5%;
+    margin: 5%;
+  }
+
+  .back {
+    text-align: center;
+    padding: 10%;
+    margin: auto;
+  }
+
+}

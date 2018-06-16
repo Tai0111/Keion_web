@@ -1,0 +1,198 @@
+@charset "UTF-8";
+
+/***********
+PC用CSS
+***********/
+@media print, screen and (min-width: 640px) {
+
+  body {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    font-size: 100%;
+    font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+    background: -webkit-linear-gradient(left, #BDBFBA 4%, #5A5C5B 98%), -webkit-linear-gradient(16deg, rgba(255, 255, 255, 0.5) 54%, rgba(0, 0, 0, 0.5) 100%);
+    background: linear-gradient(90deg, #BDBFBA 4%, #5A5C5B 98%), linear-gradient(74deg, rgba(255, 255, 255, 0.5) 54%, rgba(0, 0, 0, 0.5) 100%);
+    background-blend-mode: multiply;
+  }
+
+  h1.t1{
+    text-align: center;
+    color: rgb(14, 53, 201);
+  }
+
+  p.com {
+    text-align: center;
+  }
+
+  div.tab {
+    text-align: center;
+  }
+
+  table {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(255, 255, 255);
+  }
+
+  th.typ1, td.typ1 {
+    font-size: 1em;
+    min-width: 5em;
+  }
+
+  th.typ2, td.typ2 {
+    font-size: 1em;
+    min-width: 30em;
+  }
+
+  div.cen {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  button.reset {
+    width: 80px;
+    height: 30px;
+    padding: 0em;
+    border-radius: 4px;/*角の丸み*/
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+    letter-spacing: 0.5em;
+    text-indent:0.5em;
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  input.Confirm {
+    border-style:none;
+    width: 80px;
+    height: 30px;
+    padding: 0em;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #FFF;
+    background: #0c2cb1;/*背景色*/
+    border-bottom: solid 2px #0a3188;/*少し濃い目の色に*/
+    border-radius: 4px;/*角の丸み*/
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+    letter-spacing: 0.5em;
+    text-indent:0.5em;
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  input.Confirm:active {
+    border-bottom: solid 2px #0c2cb1;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+  }
+}
+
+/************
+スマホ用CSS
+************/
+@media screen and (max-width: 640px) {
+
+  html {
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    /* 左右中央寄せ */
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    /* 上下中央寄せ */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  body {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    font-size: 60%;
+    font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+    background: -webkit-linear-gradient(left, #BDBFBA 4%, #5A5C5B 98%), -webkit-linear-gradient(16deg, rgba(255, 255, 255, 0.5) 54%, rgba(0, 0, 0, 0.5) 100%);
+    background: linear-gradient(90deg, #BDBFBA 4%, #5A5C5B 98%), linear-gradient(74deg, rgba(255, 255, 255, 0.5) 54%, rgba(0, 0, 0, 0.5) 100%);
+    background-blend-mode: multiply;
+  }
+
+
+  h1.t1{
+    text-align: center;
+    color: rgb(0, 0, 0);
+  }
+
+  p.com {
+    max-width: auto;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5%;
+  }
+
+  div.tab {
+    text-align: center;
+  }
+
+  table {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(255, 255, 255);
+  }
+
+  th.typ1, td.typ1 {
+    font-size: 1em;
+    min-width: 30%;
+  }
+
+  th.typ2, td.typ2 {
+    font-size: 1em;
+    min-width: 50%;
+  }
+
+
+  div.cen {
+    max-width: 80%;
+    padding: 5% 10% 15%;
+    margin: auto;
+    text-align: center;
+  }
+
+  button.reset {
+    width: 80px;
+    height: 30px;
+    padding: 0em;
+    border-radius: 4px;/*角の丸み*/
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+    letter-spacing: 0.5em;
+    text-indent:0.5em;
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  input.Confirm {
+    border-style:none;
+    width: 80px;
+    height: 30px;
+    padding: 0em;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #FFF;
+    background: #0c2cb1;/*背景色*/
+    border-bottom: solid 2px #0a3188;/*少し濃い目の色に*/
+    border-radius: 4px;/*角の丸み*/
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+    letter-spacing: 0.5em;
+    text-indent:0.5em;
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  input.Confirm:active {
+    border-bottom: solid 2px #0c2cb1;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+  }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="jp" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <!-- ファビコンの設定 -->
+  <link rel="SHORTCUT ICON" href="keion.ico">
+
+  <!-- 表示領域等の設定,ピンチインアウト禁止 -->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <!-- ファビコン設定(軽音マーク) -->
+  <link rel="SHORTCUT ICON" href="keion.ico">
+
+  <!-- CSS読み込み -->
+  <!-- ※デフォルトのスタイル（style.css） -->
+  <link rel="stylesheet" media="(min-width: 640px)" href="manager.css">
+  <!-- ※スマートフォン用のスタイル（smart.css） -->
+  <!--  <link rel="stylesheet" media="(max-width: 640px)" href="mobile.css"> -->
+
+  <!-- javascript読み込み -->
+  <script type="text/javascript" src="funk.js"></script>
+
+  <!-- tittle設定 -->
+  <title>部員要項入力フォーム</title>
+</head>
+<body>
+
+  <div class="top">
+  </div>
+
+  <form method="POST" class="txt1" action="manager.php">
+    <div class="download">
+      <p>登録データを全てダウンロード(.txt)</p> &nbsp;
+      <input type="hidden" value="txt1" name="txt01">
+      <input type="submit" value ="All Download" onClick="conf01()">
+    </div>
+  </form>
+
+  <form method="POST" class="txt2" action="manager.php">
+    <div class="download">
+      <p>指定した入学年のデータをダウンロード(.txt)</p>
+      <input type="text" size="4" name="year" value="" placeholder="2014">  &nbsp;
+      <input type="hidden" value="txt2" name="txt02">
+      <input type="submit" value ="Download">
+    </div>
+  </form>
+
+  <div class="back">
+    <a href="home.html"> 戻る </a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+/* 共通 */
+p {
+  text-align: center;
+}
+
+/* PC用CSS*/
+@media print, screen and (min-width: 640px) {
+
+  body {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    font-size: 100%;
+    font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+    background: -webkit-linear-gradient(left, #BDBFBA 4%, #5A5C5B 98%), -webkit-linear-gradient(16deg, rgba(255, 255, 255, 0.5) 54%, rgba(0, 0, 0, 0.5) 100%);
+    background: linear-gradient(90deg, #BDBFBA 4%, #5A5C5B 98%), linear-gradient(74deg, rgba(255, 255, 255, 0.5) 54%, rgba(0, 0, 0, 0.5) 100%);
+    background-blend-mode: multiply;
+  }
+
+  h1 {
+    text-align: center;
+    text-align: center;
+    color: rgb(18, 54, 241);
+    text-shadow:
+    2px 2px 1px #ffffff,
+    -2px 2px 1px #ffffff,
+    2px -2px 1px #ffffff,
+    -2px -2px 1px #ffffff;
+  }
+
+  .mobile {
+    display: none; /*スマホ版を非表示*/
+  }
+
+  div.top {
+    padding: 30px;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    background-image: url(marshall.jpg);
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  div.coution {
+    clear: both;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+    width: 350px;
+    position: relative;
+    padding: 0.5em 1em;
+    border: solid 3px #95ccff;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .coution .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 2px 9px;
+    line-height: 1;
+    font-size: 19px;
+    background-color: rgba(255, 255, 255);
+    color: #95ccff;
+    font-weight: bold;
+  }
+
+  div.php {
+    text-align: center;
+    font-size: x-large;
+  }
+
+}
+
+/***************
+スマホ用CSS
+***************/
+@media screen and (max-width: 640px) {
+
+}

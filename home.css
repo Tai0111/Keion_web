@@ -1,0 +1,277 @@
+@charset "UTF-8";
+/* PC用CSS*/
+
+@media print, screen and (min-width: 640px) {
+  /**************
+  form.php - css
+  **************/
+
+  body {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    font-size: 100%;
+    font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+    background: -webkit-linear-gradient(left, #BDBFBA 4%, #5A5C5B 98%), -webkit-linear-gradient(16deg, rgba(255, 255, 255, 0.5) 54%, rgba(0, 0, 0, 0.5) 100%);
+    background: linear-gradient(90deg, #BDBFBA 4%, #5A5C5B 98%), linear-gradient(74deg, rgba(255, 255, 255, 0.5) 54%, rgba(0, 0, 0, 0.5) 100%);
+    background-blend-mode: multiply;
+  }
+
+  h1.pc {
+    text-align: center;
+    text-align: center;
+    color: rgb(18, 54, 241);
+    text-shadow:
+    2px 2px 1px #ffffff,
+    -2px 2px 1px #ffffff,
+    2px -2px 1px #ffffff,
+    -2px -2px 1px #ffffff;
+  }
+
+  h1.mobile {
+    display: none; /*スマホ版を非表示*/
+  }
+
+  div.top {
+    padding: 30px;
+    margin: auto;
+    margin-bottom: 100px;
+    text-align: center;
+    background-image: url(marshall.jpg);
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  div.coution {
+    clear: both;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+    width: 350px;
+    position: relative;
+    padding: 0.5em 1em;
+    border: solid 3px #95ccff;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .coution .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 2px 9px;
+    line-height: 1;
+    font-size: 19px;
+    background-color: rgba(255, 255, 255);
+    color: #95ccff;
+    font-weight: bold;
+  }
+
+  p.box {
+    border-radius: 20px;
+    padding: 5px,0px ;
+  }
+
+  /* ボタン用スタイル */
+  div.push {
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  .choice_button {
+    /* ブロックレベル要素化 */
+    display: block;
+    width: 180px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    margin: 50px;
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    font-size: 28px;
+    color: #67c5ff;
+    background: white;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+  }
+
+  .choice_button:hover{
+    background: #67c5ff;
+    color: white;
+  }
+
+  /* 管理者ボタン */
+  .manager_button {
+    /* ブロックレベル要素化 */
+    display: block;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    margin: 50px;
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    background: rgb(47, 47, 47);
+    border: solid 2px white;
+    border-radius: 3px;
+    transition: .4s;
+  }
+
+  .manager_button:hover{
+    background: white;
+    color: black;
+    border: solid 2px black;
+    border-radius: 3px;
+  }
+}
+
+/**************
+スマホ用CSS
+**************/
+@media screen and (max-width: 640px) {
+  html {
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    /* 左右中央寄せ */
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    /* 上下中央寄せ */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  body {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    font-size: 60%;
+    font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+    background: -webkit-linear-gradient(left, #BDBFBA 4%, #5A5C5B 98%), -webkit-linear-gradient(16deg, rgba(255, 255, 255, 0.5) 54%, rgba(0, 0, 0, 0.5) 100%);
+    background: linear-gradient(90deg, #BDBFBA 4%, #5A5C5B 98%), linear-gradient(74deg, rgba(255, 255, 255, 0.5) 54%, rgba(0, 0, 0, 0.5) 100%);
+    background-blend-mode: multiply;
+  }
+
+
+
+  div.top {
+    width: auto;
+    text-align: center;
+    padding: 1%;
+    margin-top: 0%;
+    background-image: url(marshall.jpg);
+    background-size: 100%
+  }
+
+  h1 {
+    text-align: center;
+    color: rgb(18, 54, 241);
+    text-shadow:
+    2px 2px 1px #ffffff,
+    -2px 2px 1px #ffffff,
+    2px -2px 1px #ffffff,
+    -2px -2px 1px #ffffff;
+  }
+
+  .pc {
+    display: none; /* pc版を非表示 */
+  }
+
+  div.coution {
+    clear: both;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+    width: 70%;
+    position: relative;
+    padding: 0% 1%;
+    margin-bottom: 10%;
+    border: solid 3px #95ccff;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .coution .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -13%;
+    left: 10%;
+    padding: 0% 1%;
+    line-height: 1;
+    font-size: 150%;
+    background: #FFF;
+    color: #95ccff;
+    font-weight: bold;
+  }
+
+  /* ボタン用スタイル */
+  div.push {
+    text-align: center;
+    font-size: 100%;
+    margin-top: 10%;
+  }
+
+  .choice_button {
+    /* ブロックレベル要素化 */
+    display: block;
+    width: 50%;
+    height: 200%;
+    text-align: center;
+    line-height: 200%;
+    margin: 5%;
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    font-size: 150%;
+    color: #67c5ff;
+    background: white;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+  }
+
+  .choice_button:hover{
+    background: #67c5ff;
+    color: white;
+  }
+
+  /* 管理者ボタン */
+  .manager_button {
+    /* ブロックレベル要素化 */
+    display: block;
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    line-height: 100%;
+    margin: 5%;
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    background: rgb(47, 47, 47);
+    border: solid 2px white;
+    border-radius: 3px;
+    transition: .4s;
+  }
+
+  .manager_button:hover{
+    background: white;
+    color: black;
+    border: solid 2px black;
+    border-radius: 3px;
+  }
+}
+}
