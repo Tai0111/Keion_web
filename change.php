@@ -185,7 +185,7 @@ if (!empty($fix_num)) {
           <td class="typ1">名前</td>
           <td class="typ2">
             <?php
-            echo $name;
+            echo $sei . " " . $mei;
             ?>
           </td>
         </tr>
@@ -194,7 +194,7 @@ if (!empty($fix_num)) {
           <td class="typ1">ふりがな</td>
           <td class="typ2">
             <?php
-            echo $yomi;
+            echo $sei_yomi . " " . $mei_yomi;
             ?>
           </td>
         </tr>
