@@ -131,9 +131,9 @@
           <td class="typ1">パート</td>
           <td class="typ2">
             <?php
+            $array = NULL;
             if (isset($_POST['Part']) && is_array($_POST['Part'])) {
               $array = $_POST['Part'];
-              array_push($array, $_POST['other_part']);
               $array = implode(",", $array);
               $part = rtrim($array,",");
               echo $part;
@@ -234,7 +234,6 @@
       <input type="hidden" name="month" value="<?php echo $_POST['Month']; ?>">
       <input type="hidden" name="day" value="<?php echo $_POST['Day']; ?>">
       <input type="hidden" name="part" value="<?php echo $_POST['Part']; ?>">
-      <input type="hidden" name="other" value="<?php echo $_POST['other']; ?>">
       <input type="hidden" name="rival" value="<?php echo $rival; ?>">
       <input type="hidden" name="hobby" value="<?php echo $hobby; ?>">
       <input type="hidden" name="type" value="<?php echo $type; ?>">

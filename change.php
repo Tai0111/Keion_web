@@ -65,8 +65,12 @@ if (!empty($fix_num)) {
   foreach ($stmt as $row) {
 
     //データベースのフィールドを変数に格納
-    $name = $row['name'];
-    $yomi = $row['yomi'];
+    $sei = $row['sei'];
+    $mei = $row['mei'];
+    $name = $sei . " " . $mei;
+    $sei_yomi = $row['sei_yomi'];
+    $mei_yomi = $row['mei_yomi'];
+    $yomi = $sei_yomi . " " . $mei_yomi;
     $num = $row['num'];
     $faculty = $row['faculty'];
     $dep = $row['dep'];
@@ -181,7 +185,6 @@ if (!empty($fix_num)) {
           <td class="typ1">名前</td>
           <td class="typ2">
             <?php
-            $_POST['name'] = $name;
             echo $name;
             ?>
           </td>

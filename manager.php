@@ -24,7 +24,7 @@ if(isset($_POST['txt01'])){
   header("Content-Type: application/octet-stream");
   header("Content-Disposition: attachment; filename=member.txt");
   //入学年，名前を昇順にソートし取得
-  $sql = "SELECT * FROM member ORDER BY admission ASC, yomi ASC";
+  $sql = "SELECT * FROM member ORDER BY admission ASC, sei_yomi ASC, mei_yomi ASC";
 }
 
 //学年別
@@ -33,7 +33,7 @@ if(isset($_POST['txt02'])){
   $year = $_POST['year'];
   header("Content-Disposition: attachment; filename=member_of_$year.txt");
   //名前を昇順にソートし取得
-  $sql = "SELECT * FROM member WHERE admission = '$year' ORDER BY yomi ASC";
+  $sql = "SELECT * FROM member WHERE admission = '$year' ORDER BY sei_yomi ASC, mei_yomi ASC";
 }
 
   //クエリ
