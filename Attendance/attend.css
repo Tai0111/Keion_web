@@ -1,0 +1,395 @@
+@charset "UTF-8";
+
+/* スマホ用の設定はl.146から */
+
+/***************
+PC用CSS
+***************/
+
+@media print, screen and (min-width: 640px) {
+
+  h1 {
+    text-align: center;
+    text-align: center;
+    color: rgb(18, 54, 241);
+    text-shadow:
+    2px 2px 1px #ffffff,
+    -2px 2px 1px #ffffff,
+    2px -2px 1px #ffffff,
+    -2px -2px 1px #ffffff;
+  }
+
+  .mobile {
+    display: none; /*スマホ版を非表示*/
+  }
+
+  body {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    font-size: 100%;
+    font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+    background: -webkit-linear-gradient(left, #BDBFBA 4%, #5A5C5B 98%), -webkit-linear-gradient(16deg, rgba(255, 255, 255, 0.5) 54%, rgba(0, 0, 0, 0.5) 100%);
+    background: linear-gradient(90deg, #BDBFBA 4%, #5A5C5B 98%), linear-gradient(74deg, rgba(255, 255, 255, 0.5) 54%, rgba(0, 0, 0, 0.5) 100%);
+    background-blend-mode: multiply;
+  }
+
+  div.top {
+    padding: 30px;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    background-image: url(/marshall.jpg);
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  div.coution {
+    clear: both;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+    width: 350px;
+    position: relative;
+    padding: 0.5em 1em;
+    border: solid 3px #95ccff;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .coution .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 2px 9px;
+    line-height: 1;
+    font-size: 19px;
+    background-color: rgba(255, 255, 255);
+    color: #95ccff;
+    font-weight: bold;
+  }
+
+  p.box {
+    border-radius: 20px;
+    padding: 5px,0px ;
+  }
+
+  form.attend {
+    /*文字の設定*/
+    padding: 50px;
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 19px;
+    text-shadow: 1px 1px 1px #999999;
+  }
+
+  /*
+  以下ラジオボタンの設定
+  */
+  .cp_ipradio {
+    width: 90%;
+    margin: 2em auto;
+    text-align: center;
+  }
+  .cp_ipradio input[type='radio'] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  .cp_ipradio label {
+    position: relative;
+    display: inline-block;
+    margin-right: 30px;
+    padding-right: 10px;
+    padding-left: 35px;
+    cursor: pointer;
+  }
+  .cp_ipradio label::before {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 24px;
+    height: 24px;
+    content: ' ';
+    border: 2px solid #da3c41;
+    border-radius: 4px;
+  }
+  .cp_ipradio input[type='radio'] + label::before {
+    border-radius: 18px;
+  }
+  .cp_ipradio input[type='radio']:checked + label {
+    padding-left: 10px;
+    color: #ffffff;
+  }
+  .cp_ipradio input[type='radio']:checked + label::before {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #da3c41;
+  }
+  /* Transition */
+  .cp_ipradio label, .cp_ipradio label::before {
+    -webkit-transition: 0.25s all ease;
+    transition: 0.25s all ease;
+  }
+  /*
+  ラジオボタンここまで
+  */
+
+  /*
+  以下送信ボタンの設定
+  */
+  div.btn {
+    text-align: center;
+  }
+  .cp_btn {
+    display: block;
+    position: relative;
+    width: 160px;
+    padding: 0.8em;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border:1px solid #8BC34A;
+    background: #8BC34A;
+    overflow: hidden;
+    z-index: 1 !important;
+  }
+  .cp_btn:after {
+    content:"";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 0;
+    width: 100%;
+    background : #fff;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transition: 0.3s;
+    z-index: -1;
+  }
+  .cp_btn:hover {
+    color: #da3c41;
+  }
+  .cp_btn:hover:after {
+    height: 250%;
+    opacity: 1;
+  }
+  .cp_btn:active:after {
+    height: 350%;
+    opacity: 1;
+  }
+}
+
+
+/**************
+スマホ用CSS
+**************/
+
+@media screen and (max-width: 640px) {
+  /*********
+  form.php
+  *********/
+  html {
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    /* 左右中央寄せ */
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    /* 上下中央寄せ */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  body {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    font-size: 60%;
+    font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+    background: -webkit-linear-gradient(left, #BDBFBA 4%, #5A5C5B 98%), -webkit-linear-gradient(16deg, rgba(255, 255, 255, 0.5) 54%, rgba(0, 0, 0, 0.5) 100%);
+    background: linear-gradient(90deg, #BDBFBA 4%, #5A5C5B 98%), linear-gradient(74deg, rgba(255, 255, 255, 0.5) 54%, rgba(0, 0, 0, 0.5) 100%);
+    background-blend-mode: multiply;
+  }
+
+  div.top {
+    width: auto;
+    text-align: center;
+    padding: 1%;
+    margin-top: 0%;
+    background-image: url(/marshall.jpg);
+    background-size: 100%
+  }
+
+  h1 {
+    text-align: center;
+    color: rgb(18, 54, 241);
+    text-shadow:
+    2px 2px 1px #ffffff,
+    -2px 2px 1px #ffffff,
+    2px -2px 1px #ffffff,
+    -2px -2px 1px #ffffff;
+  }
+
+  .pc {
+    display: none; /* pc版を非表示 */
+  }
+
+  div.coution {
+    clear: both;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+    width: 70%;
+    position: relative;
+    padding: 0% 1%;
+    margin-bottom: 10%;
+    border: solid 3px #95ccff;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .coution .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -13%;
+    left: 10%;
+    padding: 0% 1%;
+    line-height: 1;
+    font-size: 150%;
+    background: #FFF;
+    color: #95ccff;
+    font-weight: bold;
+  }
+
+  /* フォーム以下のデザイン　*/
+  form.attend {
+    /*文字の設定*/
+    text-align: center;
+    font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 100%;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #999999;
+    /*範囲の設定*/
+    width: auto;
+    padding : 3%;
+    margin: 5% 0%;
+    margin: auto;
+  }
+
+  /*
+  以下ラジオボタンの設定
+  */
+  .cp_ipradio {
+    width: 90%;
+    margin: 2em auto;
+    font-size: 200%;
+    text-align: center;
+  }
+  .cp_ipradio input[type='radio'] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  .cp_ipradio label {
+    position: relative;
+    display: inline-block;
+    margin-right: 30px;
+    padding-right: 10px;
+    padding-left: 35px;
+    cursor: pointer;
+  }
+  .cp_ipradio label::before {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 24px;
+    height: 24px;
+    content: ' ';
+    border: 2px solid #da3c41;
+    border-radius: 4px;
+  }
+  .cp_ipradio input[type='radio'] + label::before {
+    border-radius: 18px;
+  }
+  .cp_ipradio input[type='radio']:checked + label {
+    padding-left: 10px;
+    color: #ffffff;
+  }
+  .cp_ipradio input[type='radio']:checked + label::before {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #da3c41;
+  }
+  /* Transition */
+  .cp_ipradio label, .cp_ipradio label::before {
+    -webkit-transition: 0.25s all ease;
+    transition: 0.25s all ease;
+  }
+  /*
+  ラジオボタンここまで
+  */
+
+  /*
+  以下送信ボタンの設定
+  */
+  div.btn {
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .cp_btn {
+    display: block;
+    position: relative;
+    width: 160px;
+    padding: 0.8em;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border:1px solid #8BC34A;
+    background: #8BC34A;
+    overflow: hidden;
+    z-index: 1 !important;
+  }
+  .cp_btn:after {
+    content:"";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 0;
+    width: 100%;
+    background : #fff;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transition: 0.3s;
+    z-index: -1;
+  }
+  .cp_btn:hover {
+    color: #da3c41;
+  }
+  .cp_btn:hover:after {
+    height: 250%;
+    opacity: 1;
+  }
+  .cp_btn:active:after {
+    height: 350%;
+    opacity: 1;
+  }
+}

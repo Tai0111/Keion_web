@@ -124,8 +124,8 @@ if (!empty($fix_num)) {
   <!-- 本文 -->
   <div class="top">
 
-    <h1 class="pc">H30 軽音楽部 部員要項入力フォーム</h1>
-    <h1 class="mobile">H30 軽音楽部 <br> 部員要項入力フォーム</h1>
+    <h1 class="pc">軽音楽部 部員要項入力フォーム</h1>
+    <h1 class="mobile">軽音楽部 <br> 部員要項入力フォーム</h1>
 
     <div class="coution">
       <p class="box">
